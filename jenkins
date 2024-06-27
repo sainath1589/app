@@ -22,11 +22,10 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonar') { 
                     sh '''
-                        sonar-scanner \
-                        -Dsonar.projectKey=java \
-                        -Dsonar.sources=. \
-                        -Dsonar.host.url=http://34.140.97.122:9000 \
-                        -Dsonar.login=46526f7d5bf29e3ad0dfb3e3bf8180d7dad9e59c
+                       mvn clean verify sonar:sonar \
+                      -Dsonar.projectKey=app \
+                      -Dsonar.host.url=http://35.195.16.8:9000 \
+                      -Dsonar.login=bec17c8812a2f740d7a42a0e11993e1000fd5339
                     '''
                 }
             }
@@ -80,4 +79,3 @@ pipeline {
         }
     }
 }
-
