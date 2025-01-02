@@ -10,7 +10,7 @@ EXPOSE 8080
 # Run Tomcat
 CMD ["catalina.sh", "run"]
  
-# this is newly added comment pls check and approve 
+# this is newly added comment pls check and approved
 
 
 
